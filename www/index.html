@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en" ng-app="fileUploadApp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base href="/" />
+    <title>File Uploader</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- <link rel="stylesheet" href="www/css/style.css"> -->
+    <!-- <link rel="stylesheet" href="public/css/bootstrap.css"> -->
+
+</head>
+
+<body>
+
+    <!-- BUILD JS -->
+
+
+    <!-- <script src="frontend_fileupload/www/defineApp.js"></script> -->
+    <!-- <script src="/public/build/vendor.js"></script>
+    <script src="/public/build/app.js"></script> -->
+
+
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+    <!-- /// boostrap -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- angular -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script>
+        (function () {
+            'use strict'
+
+            angular.module('fileUploadApp', [])
+                .controller('fileUploadController', FileUploadController)
+            FileUploadController.$inject = ['$http']
+
+
+            function FileUploadController($http) {
+                'use strict'
+                var vm = this
+
+                console.log('controller is loading')
+                vm.title = "hola mundo"
+                vm.reverseSort = false;
+                vm.orderByField = 'location_name';
+
+                function init() {
+                    ////fetches the city data
+                    // getCityData()
+                    console.log('controller is loading')
+                }
+
+                // function getCityData() {
+                //     debugger
+                //     ///https://data.lacity.org/A-Livable-and-Sustainable-City/Department-of-Recreation-and-Parks-Facility-and-Pa/ax8j-dhzm
+                //     $http
+                //         .get(`https://data.lacity.org/resource/xyvg-dst2.json`)
+                //         .then(function (res) {
+                //             vm.cityResult = res.data
+                //             ///console.log(vm.cityResult)
+                //         })
+
+                // }
+                init()
+            }
+        })()
+    </script>
+
+
+    <div ui-view="root">
+        <h1>hello mundo</h1>
+    </div>
+
+    <div ng-controller="fileUploadController as fileUploadCtrl" class="page">
+        {{fileUploadCtrl.title}}
+    </div>
+</body>
+
+</html>

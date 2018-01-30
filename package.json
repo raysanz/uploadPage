@@ -1,7 +1,6 @@
 {
   "name": "frontend_fileUpload",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -16,5 +15,15 @@
   "bugs": {
     "url": "https://github.com/raysanz/uploadPage/issues"
   },
-  "homepage": "https://github.com/raysanz/uploadPage#readme"
+  "homepage": "https://github.com/raysanz/uploadPage#readme",
+  "dependencies": {
+    "angularjs": "0.0.1",
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "gulp": "^3.9.1",
+    "jquery": "^3.3.1",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {},
+  "description": ""
 }
